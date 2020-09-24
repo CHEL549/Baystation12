@@ -717,7 +717,9 @@
 		update_icons()
 
 /mob/proc/reset_layer()
-	if(lying)
+	if(table_hiding)
+		layer = HIDING_MOB_LAYER
+	else if(lying)
 		plane = DEFAULT_PLANE
 		layer = LYING_MOB_LAYER
 	else
